@@ -1,2 +1,4 @@
 <h1><strong>{{ contact?.firstName }} {{ contact?.lastName }}</strong></h1>
 <p>{{ contact?.street }}, {{ contact?.city }}</p>
+<button routerLink="/contacts">Back</button>
+<button [routerLink]="'/contacts/edit/' + contact?.id">Edit</button>

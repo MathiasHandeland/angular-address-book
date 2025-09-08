@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Contact } from 'src/app/models/contact';
 import { ContactsService } from '../contacts.service';
-import { first } from 'rxjs';
 
 @Component({
   selector: 'app-add',

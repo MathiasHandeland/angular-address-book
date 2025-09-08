@@ -30,8 +30,3 @@
 .view-button:hover {
   background-color: #e0e0e0;
 }
-
-.view-button a {
-  text-decoration: none;
-  color: #040404;
-  font-weight: bold;}

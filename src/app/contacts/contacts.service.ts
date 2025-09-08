@@ -17,4 +17,12 @@ export class ContactsService {
     const contact = this.contacts.find(contact => contact.id === id);
     return of(contact);
   }
+
+  public updateContact(updatedContact: Contact): Observable<void> {
+    const index = this.contacts.findIndex(contact => contact.id === updatedContact.id);
+    if (index !== -1) {
+      this.contacts[index] = updatedContact;
+    }
+    return of(undefined);
+  }
 }

@@ -15,7 +15,7 @@
             <td>{{ contact.lastName }}</td>
             <td>{{ contact.street }}</td>
             <td>{{ contact.city }}</td>
-            <td><button class="view-button"><a routerLink="/contacts/{{ contact.id }}">View</a></button></td>
+            <td><button class="view-button" [routerLink]="'/contacts/' + contact.id">View</button></td>
         </tr>
     </tbody>
 </table>
