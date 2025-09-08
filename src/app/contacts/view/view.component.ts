@@ -9,6 +9,7 @@ import { ContactsService } from '../contacts.service';
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.css']
 })
+
 export class ViewComponent implements OnInit {
   contact: Contact | null = null;
   contactId: number | null = null;

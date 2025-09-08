@@ -6,6 +6,7 @@ import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'app-edit',
+  standalone: false,
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
@@ -27,17 +28,17 @@ export class EditComponent {
   }
 
   ngOnInit(): void {
-  const id = Number(this.route.snapshot.paramMap.get('id'));
-  this.contactsService.GetContactById(id).subscribe(contact => {
-    if (contact) {
-      this.contactForm.patchValue(contact); 
-    }
-  });
-}
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.contactsService.GetContactById(id).subscribe(contact => {
+      if (contact) {
+        this.contactForm.patchValue(contact); 
+      }
+    });
+  }
 
   updateContact() {
     const updatedContact: Contact = {
-      id: 0,
+      id: Number(this.route.snapshot.paramMap.get('id')),
       firstName: this.contactForm.value.firstName,
       lastName: this.contactForm.value.lastName,
       street: this.contactForm.value.street,
